@@ -5,7 +5,7 @@ var sample_controller = function () {
 
     	label: "hello world",
 
-    	query: function (query: string, unescaped_values: [ any ]) {
+    	query: function (query, unescaped_values) {
 	    	return [ 1, 2 ]
 	    }
 
