@@ -1,6 +1,6 @@
 "use strict";
-//@autoinject
-var api = function (sample_controller) {
+//@autoinject(name=api)
+var apiFactory = function (sample_controller) {
     var api_instance = {
         start: function () {
             console.log(sample_controller.label);
@@ -10,4 +10,4 @@ var api = function (sample_controller) {
     };
     return api_instance;
 };
-exports.api = api;
+exports.apiFactory = apiFactory;

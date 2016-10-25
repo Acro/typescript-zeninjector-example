@@ -1,5 +1,5 @@
-//@autoinject
-var sample_controller = function () {
+//@autoinject(name=sample_controller)
+var controllerFactory = function () {
 
 	var controller: SampleController = {
 
@@ -15,4 +15,4 @@ var sample_controller = function () {
 
 }
 
-export { sample_controller }
+export { controllerFactory }

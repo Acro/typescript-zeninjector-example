@@ -1,5 +1,5 @@
-//@autoinject
-var api = function (sample_controller: SampleController) {
+//@autoinject(name=api)
+var apiFactory = function (sample_controller: SampleController) {
 
 	var api_instance = {
 
@@ -17,4 +17,4 @@ var api = function (sample_controller: SampleController) {
 	return api_instance
 }
 
-export { api }
+export { apiFactory }

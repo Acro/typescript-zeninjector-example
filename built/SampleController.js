@@ -1,6 +1,6 @@
 "use strict";
-//@autoinject
-var sample_controller = function () {
+//@autoinject(name=sample_controller)
+var controllerFactory = function () {
     var controller = {
         label: "hello world",
         query: function (query, unescaped_values) {
@@ -9,4 +9,4 @@ var sample_controller = function () {
     };
     return controller;
 };
-exports.sample_controller = sample_controller;
+exports.controllerFactory = controllerFactory;
