@@ -3,6 +3,6 @@ interface QueryFunction {
 }
 
 interface SampleController {
-    query: QueryFunction,
-    label: string
+	query: QueryFunction,
+	label: string
 }

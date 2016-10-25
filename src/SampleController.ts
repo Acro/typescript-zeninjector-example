@@ -1,17 +1,17 @@
 //@autoinject
 var sample_controller = function () {
-    
-    var controller: SampleController = {
 
-    	label: "hello world",
+	var controller: SampleController = {
 
-    	query: function (query, unescaped_values) {
-	    	return [ 1, 2 ]
-	    }
+		label: "hello world",
 
-    }
+		query: function (query, unescaped_values) {
+			return [ 1, 2 ]
+		}
 
-    return controller
+	}
+
+	return controller
 
 }
 

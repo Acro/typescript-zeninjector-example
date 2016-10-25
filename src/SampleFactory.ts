@@ -7,8 +7,8 @@ var api = function (sample_controller: SampleController) {
 
 			console.log(sample_controller.label)
 
-		    var query_result = sample_controller.query("SELECT * FROM xx WHERE name = ?", [ "test" ])
-		    console.log(query_result)
+			var query_result = sample_controller.query("SELECT * FROM xx WHERE name = ?", [ "test" ])
+			console.log(query_result)
 
 		}
 
