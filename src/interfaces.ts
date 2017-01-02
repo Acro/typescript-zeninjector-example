@@ -1,8 +1,12 @@
 interface QueryFunction {
-	(query: string, unescaped_values: [ any ]): [ any ]
+	(query: string, unescaped_values: [ any ]): Promise<any[]>
+}
+
+interface KoaMiddlewareFunction {
+	(ctx: any, next: any): Promise<any>
 }
 
 interface SampleController {
-	query: QueryFunction,
+	hello: KoaMiddlewareFunction,
 	label: string
 }

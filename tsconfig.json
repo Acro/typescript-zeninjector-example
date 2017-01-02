@@ -1,12 +1,23 @@
 {
-	"compilerOptions": {
-        "outDir": "./built",
-        "allowJs": true,
-        "target": "es6",
-        "removeComments": false,
-        "moduleResolution": "node",
-	    "module": "commonjs"
-    },
-    "types": [ "node" ],
-	"include": [ "src/**/*" ]
+  "compilerOptions": {
+    "target": "es6",
+    "allowJs": true,
+    "removeComments": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "types": [ "node" ],
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
 }

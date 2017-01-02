@@ -1,26 +1,22 @@
-/// <reference path="../typings/index.d.ts" />
-/// <reference path="../zazeninjector.d.ts" />
+/// <reference path="./third_party_declarations/zazeninjector.d.ts" />
 
-'use strict'
-
-import * as co from 'co';
-
-// This `import x = require` is necessary because the package
-// exports a single class, something not supported by ES6, which
-// TS have therefore invented their own syntax for.
 import Zeninjector = require('zazeninjector');
+import * as Pino from 'pino';
 
-const container = new Zeninjector();
+// `import x = require` is necessary packages that export a single class,
+// something not supported by ES6, which TS have therefore invented their own
+// syntax for.
 
-var boot = function* () {
-	yield container.scan(__dirname + '/**/*.js')
-	var api = yield container.resolve('api')
-	api.start()
-}
+let pino = Pino();
+let container = new Zeninjector();
 
-var handleError = (err) => {
-	console.log(err.stack)
-	throw err
-}
+container.setLogger(pino);
+container.registerAndExport('logger', pino);
 
-co(boot).catch(handleError)
+async function boot() {
+  await container.scan(__dirname + '/**/*.js');
+  let api = await container.resolve('api');
+  api.start();
+};
+
+boot();

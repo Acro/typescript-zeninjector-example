@@ -2,18 +2,26 @@
   "name": "zeninjector-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "built/startup.js",
+  "main": "build/startup.js",
   "scripts": {
-    "start": "tsc --module commonjs && node built/startup.js",
+    "start": "tsc --strictNullChecks --noImplicitAny --module commonjs && node build/startup.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "acrocz@gmail.com",
   "license": "ISC",
-  "dependencies": {
-    "co": "^4.6.0",
-    "zazeninjector": "^0.2.0"
-  },
   "devDependencies": {
-    "@types/node": "^6.0.45"
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3"
+  },
+  "dependencies": {
+    "@types/koa": "^2.0.33",
+    "@types/lodash": "^4.14.38",
+    "@types/node": "^6.0.46",
+    "@types/pino": "^1.0.4",
+    "config-cats": "^0.1.2",
+    "koa": "^2.0.0",
+    "lodash": "^4.16.6",
+    "pino": "^2.14.0",
+    "zazeninjector": "^0.2.0"
   }
 }
